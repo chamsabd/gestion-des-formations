@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 /* Modules */
 import auth from "./modules/auth";
-import post from "./modules/post";
+import formation from "./modules/formation";
 
 export default new Vuex.Store({
     state: {},
@@ -14,6 +14,6 @@ export default new Vuex.Store({
     actions: {},
     modules: {
         auth,
-        post,
+        formation,
     },
 });

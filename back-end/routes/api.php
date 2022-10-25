@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\api\AuthController;
+use App\Http\Controllers\api\FormationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +20,7 @@ Route::middleware('auth:sanctum')->group(function () {
         return $request->user();
     });
     Route::post('/logout', [AuthController::class, 'logout']);
-    Route::apiResource('/home', HomeController::class);
+    Route::apiResource('/formations', FormationController::class);
 });
 
 Route::post('/login', [AuthController::class, 'login']);
